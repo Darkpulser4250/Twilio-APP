@@ -4,7 +4,7 @@ from credentials import account_sid, auth_token, my_cell, my_twillio,name_my_cel
 client = Client(account_sid,auth_token)
 
 for i in range(len(name_my_cell)):
-    text = '''Asalamualikum {} \nSay hi back to me, testing, testing...1....2...3...?'''
+    text = '''{} \nSay hi back to me, testing, testing...1....2...3...?'''
     my_msg = text.format(name_my_cell[i])
 
     message = client.messages.create(to=my_cell[i],from_=my_twillio,
